@@ -1,0 +1,19 @@
+{
+  "name": "timetabling-solver",
+  "version": "0.2.0",
+  "author": "Federico Rampazzo <frampone@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/framp/timetabling-solver",
+  "scripts": {
+    "test": "faucet",
+    "lint": "standard"
+  },
+  "dependencies": {
+    "genetic-js": "^0.1.14"
+  },
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "standard": "^8.6.0",
+    "tape": "^4.6.3"
+  }
+}
