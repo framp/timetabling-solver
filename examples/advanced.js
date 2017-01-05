@@ -31,7 +31,7 @@ const constraints = [
   randomSet(20, bookables)
 ]
 
-solve({ slots, bookables, constraints }, { skip: 1 },
+solve({ slots, bookables, constraints }, { skip: 1, size: 50 },
   (table, { fitness }) => console.log(table, fitness),
   (table, { generation, fitness }) => console.log(generation, fitness))
 
