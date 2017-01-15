@@ -11,7 +11,7 @@ Given:
  - a list of constraints in the form of:
     - a list of bookables which shouldn't overlap
 
-Found the optimal assignment for bookables in time slots in order to minimize the number of collisions between bookables
+Find the optimal assignment for bookables in time slots in order to minimize the number of collisions between bookables
 
 ##Description
 
