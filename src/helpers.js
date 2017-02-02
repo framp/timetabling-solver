@@ -11,6 +11,7 @@ exports.shuffle = (arr) => {
   }
   const result = arr.slice()
   let i = arr.length
+  if (i === 0) return result
   while (--i) {
     const j = Math.floor(Math.random() * (i + 1))
     swap(result, i, j)
