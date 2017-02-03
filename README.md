@@ -80,7 +80,8 @@ require('timetabling-solver').minCollisions(data, config, callback, partialCallb
       fitness,          //Fitness number which represent the number of collisions
       generation,       //Number of generation of elapsed
       stats,            //Stats as per genetic-js
-      pop               //Current population
+      pop,              //Current population
+      collisions        //Collisions in the fittest timetable
     }
 ```
 

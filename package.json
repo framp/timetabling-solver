@@ -1,6 +1,6 @@
 {
   "name": "timetabling-solver",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "Federico Rampazzo <frampone@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/framp/timetabling-solver",
