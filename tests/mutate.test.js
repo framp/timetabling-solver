@@ -7,7 +7,7 @@ tape('mutate mutates a timetable targeting a collision', (assert) => {
   const context = {
     userData: {
       helpers,
-      constraints: [['1','7']]
+      constraints: [['1', '7']]
     }
   }
   const data = ['abcdef'.split(''), '12345678'.split('')]

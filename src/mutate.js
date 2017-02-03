@@ -12,8 +12,8 @@ module.exports = function (entity) {
     collisions[Math.floor(Math.random() * collisions.length)]
       .split(',')[Math.floor(Math.random() * 2)]
   const i = result[1].findIndex((bookable) => bookable === randomCollision)
-  let j = Math.floor(Math.random() * (result[1].length-1))
-  if (j>=i) j++
+  let j = Math.floor(Math.random() * (result[1].length - 1))
+  if (j >= i) j++
   swap(result[1], i, j)
   return result
 }

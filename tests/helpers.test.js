@@ -3,14 +3,14 @@ const { swap, shuffle, table, detable, findCollisions } = require('../src/helper
 
 tape('swap works', (assert) => {
   assert.plan(1)
-  const arr = [1,2,3,4]
+  const arr = [1, 2, 3, 4]
   swap(arr, 1, 2)
-  assert.deepEqual(arr, [1,3,2,4])
+  assert.deepEqual(arr, [1, 3, 2, 4])
 })
 
 tape('shuffle works', (assert) => {
   assert.plan(1)
-  const arr = [1,2,3,4]
+  const arr = [1, 2, 3, 4]
   const shuffled = shuffle(arr)
   assert.deepEqual(new Set(arr), new Set(shuffled))
 })
@@ -31,6 +31,6 @@ tape('findCollisions works', (assert) => {
   const bookables = '12345678'.split('')
   const timetable = table(slots, bookables)
 
-  assert.deepEqual(findCollisions(timetable, ['1','7','6']), ['1,7'])
-  assert.deepEqual(findCollisions(timetable, ['1','3']), [])
+  assert.deepEqual(findCollisions(timetable, ['1', '7', '6']), ['1,7'])
+  assert.deepEqual(findCollisions(timetable, ['1', '3']), [])
 })

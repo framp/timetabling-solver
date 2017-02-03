@@ -20,10 +20,13 @@ exports.minCollisions = (data, config = {}, callback, partialCallback) => {
   genetic.fitness = fitness
   genetic.generation = ([{ fitness }]) => fitness !== 0
   genetic.notification = function (pop, generation, stats, isFinished) {
-    const { table } = this.userData.helpers
+    const { table, findCollisions } = this.userData.helpers
     const { entity, fitness } = pop[0]
     const timetable = table(...entity)
-    const meta = { fitness, generation, stats, pop }
+    const constraints = this.userData.constraints
+    const collisions = constraints.reduce((acc, constraint) =>
+      acc.concat(findCollisions(timetable, constraint)), [])
+    const meta = { fitness, generation, stats, pop, collisions }
     if (isFinished && callback) return callback(timetable, meta)
     if (partialCallback) return partialCallback(timetable, meta)
   }

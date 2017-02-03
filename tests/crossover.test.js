@@ -9,9 +9,9 @@ tape('crossover works', (assert) => {
       helpers,
       bookables: '123456789'.split(''),
       constraints: [
-        ['1','7'],
-        ['2','4','8'],
-        ['3','9']
+        ['1', '7'],
+        ['2', '4', '8'],
+        ['3', '9']
       ]
     }
   }
