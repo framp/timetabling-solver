@@ -1,10 +1,10 @@
-#timetabling-solver
+# timetabling-solver
 
 A library which exposes a genetic algorithm to solve (one of) the [timetabling problem](http://web.csulb.edu/~obenli/DSS/node2.html).
 
 TL;DR: I want to assign things to time slots and minimize by the number of collisions between things
 
-##Problem
+## Problem
 Given:
  - a list of time slots
  - a list of bookables that can be assigned to a specific time slot
@@ -13,7 +13,7 @@ Given:
 
 Find the optimal assignment for bookables in time slots in order to minimize the number of collisions between bookables
 
-##Description
+## Description
 
 The genetic algorithm presented: 
  - Generates a population of random timetables
@@ -32,7 +32,7 @@ Mutation is specifically tuned to mutate a random collisions with a random eleme
 The idea behind targeting a random collision and not a random element is that we want to target the problematic areas.
 Following this approaches increased performances greatly and reduced the number of cases in which the algorithm was getting stuck repeatedly on populations with very low number of collisions.
 
-##Basic Example
+## Basic Example
 
 ```
 const solve = require('timetabling-solver').minCollisions
@@ -55,7 +55,7 @@ solve({ slots, bookables, constraints }, {}, (table, fitness) => console.log(tab
   '8:00': [ 'Tennis' ] } 0
 ```
 
-##API
+## API
 ```
 require('timetabling-solver').minCollisions(data, config, callback, partialCallback)
   data = {              // Object which represents the specification of the problem
@@ -85,16 +85,16 @@ require('timetabling-solver').minCollisions(data, config, callback, partialCallb
     }
 ```
 
-##Examples
+## Examples
 Check out the examples (the advanced one in particular).
 
-##Contributions
+## Contributions
 I love small and big contributions.
 Whether you want to solve another entire timetabling problem or whether you found a default configuration which yields better results in a demonstrable way - I'm always happy to review PRs and discuss about the project.
 
 Unfortunately I benefited from this code a long time ago - aka I'm not using it actively and don't have too much time to work on it.
 
-##Credits
+## Credits
 
 - This awesome paper which was the original inspiration: [A_Genetic_Algorithm_To_Solve_The_Timetable_Problem](https://www.researchgate.net/publication/2253354_A_Genetic_Algorithm_To_Solve_The_Timetable_Problem)
 - [Genetic.js](https://github.com/subprotocol/genetic-js)
