@@ -1,10 +1,10 @@
 module.exports = function (entity) {
-  const { table, swap, findCollisions } = this.userData.helpers
+  const { table, swap } = this.userData.helpers
+  const { findCollisions, constraints } = this.userData
   const result = [
     entity[0].slice(),
     entity[1].slice()
   ]
-  const constraints = this.userData.constraints
   const timetable = table(...entity)
   const collisions = constraints.reduce((acc, constraint) =>
     acc.concat(findCollisions(timetable, constraint)), [])

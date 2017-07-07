@@ -1,12 +1,14 @@
 const tape = require('tape')
 const mutate = require('../src/mutate')
 const helpers = require('../src/helpers')
+const findCollisions = require('../src/findCollisions')
 
 tape('mutate mutates a timetable targeting a collision', (assert) => {
   assert.plan(4)
   const context = {
     userData: {
       helpers,
+      findCollisions,
       constraints: [['1', '7']]
     }
   }

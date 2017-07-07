@@ -5,10 +5,12 @@ const seed = require('./seed')
 const mutate = require('./mutate')
 const crossover = require('./crossover')
 const fitness = require('./fitness')
+const findCollisions = require('./findCollisions')
 
 exports.minCollisions = (data, config = {}, callback, partialCallback) => {
   if (!data) data = {}
   data.helpers = helpers
+  data.findCollisions = findCollisions
 
   const genetic = Genetic.create()
   genetic.optimize = Genetic.Optimize.Minimize
@@ -20,7 +22,8 @@ exports.minCollisions = (data, config = {}, callback, partialCallback) => {
   genetic.fitness = fitness
   genetic.generation = ([{ fitness }]) => fitness !== 0
   genetic.notification = function (pop, generation, stats, isFinished) {
-    const { table, findCollisions } = this.userData.helpers
+    const { table } = this.userData.helpers
+    const { findCollisions } = this.userData
     const { entity, fitness } = pop[0]
     const timetable = table(...entity)
     const constraints = this.userData.constraints

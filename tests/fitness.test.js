@@ -1,12 +1,14 @@
 const tape = require('tape')
 const fitness = require('../src/fitness')
 const helpers = require('../src/helpers')
+const findCollisions = require('../src/findCollisions')
 
 tape('fitness works', (assert) => {
   assert.plan(3)
   const context = {
     userData: {
       helpers,
+      findCollisions,
       constraints: [
         ['1', '7'],
         ['2', '4', '8'],

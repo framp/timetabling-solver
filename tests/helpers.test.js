@@ -1,5 +1,6 @@
 const tape = require('tape')
-const { swap, shuffle, table, detable, findCollisions } = require('../src/helpers')
+const { swap, shuffle, table, detable } = require('../src/helpers')
+const findCollisions = require('../src/findCollisions')
 
 tape('swap works', (assert) => {
   assert.plan(1)
