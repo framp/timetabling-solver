@@ -1,4 +1,4 @@
-const Genetic = require('genetic-js')
+const Genetic = require('genetic-js-no-ww')
 
 const helpers = require('./helpers')
 const seed = require('./seed')
