@@ -1,5 +1,6 @@
+const { table, swap, findCollisions } = require('./helpers')
+
 module.exports = function (entity) {
-  const { table, swap, findCollisions } = this.userData.helpers
   const result = [
     entity[0].slice(),
     entity[1].slice()
