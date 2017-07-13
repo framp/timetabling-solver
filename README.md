@@ -120,8 +120,8 @@ Unfortunately I benefited from this code a long time ago - aka I'm not using it 
 
 ## Contributors
  - [@framp](http://framp.me)
- - @sithmel
- - @lud77
+ - [@sithmel](https://github.com/sithmel)
+ - [@lud77](https://github.com/lud77)
 
 ## Credits
 
