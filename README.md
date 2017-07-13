@@ -55,7 +55,8 @@ solve({ slots, bookables, constraints }, {}, (table, fitness) => console.log(tab
   '8:00': [ 'Tennis' ] } 0
 ```
 
-## Custom Constraints
+## Custom Constraints
+
 From version 0.3.2 you can add custom constraints to your problems.
 
 Instead of adding a list of colliding entries, you need to provide a function.
