@@ -55,6 +55,29 @@ solve({ slots, bookables, constraints }, {}, (table, fitness) => console.log(tab
   '8:00': [ 'Tennis' ] } 0
 ```
 
+## Custom Constraints
+From version 0.3.2 you can add custom constraints to your problems.
+
+Instead of adding a list of colliding entries, you need to provide a function.
+
+A custom constraint is a function which accept a timetable and returns a list of collisions:
+ - Returning an empty array means there are no collisions according to your constraint.
+ - Returning an array with values from your bookables means they're colliding
+
+```
+const solve = require('timetabling-solver').minCollisions
+
+const slots = ['8:00', '10:00']
+const bookables = ['Tennis', 'Climbing']
+const constraints = [ //list of non overlapping constraints
+  ['Tennis', 'Climbing'],
+  (timetable) => timetable['8:00'].indexOf('Climbing') !== -1 ? ['Climbing'] : []
+  //Climbing can't be at 8:00
+]
+
+solve({ slots, bookables, constraints }, {}, (table, fitness) => console.log(table, fitness))
+```
+
 ## API
 ```
 require('timetabling-solver').minCollisions(data, config, callback, partialCallback)
@@ -93,6 +116,11 @@ I love small and big contributions.
 Whether you want to solve another entire timetabling problem or whether you found a default configuration which yields better results in a demonstrable way - I'm always happy to review PRs and discuss about the project.
 
 Unfortunately I benefited from this code a long time ago - aka I'm not using it actively and don't have too much time to work on it.
+
+## Contributors
+ - [@framp](http://framp.me)
+ - @sithmel
+ - @lud77
 
 ## Credits
 

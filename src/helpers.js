@@ -41,6 +41,7 @@ const hasDifference = (a, b) =>
           b.filter(x => a.indexOf(x) < 0).length)
 
 const findCollisions = (timetable, constraint) => {
+  if (typeof constraint === 'function') return constraint(timetable)
   const inSlot = (bookable) => (slot) => timetable[slot].indexOf(bookable) !== -1
   const slots = Object.keys(timetable)
   const slotLists = constraint.map((bookable) => [bookable, slots.filter(inSlot(bookable))])
