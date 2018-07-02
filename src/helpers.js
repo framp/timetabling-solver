@@ -25,7 +25,7 @@ const table = (slots, bookables) => {
 
 const detable = (slots, table) => {
   const bookables = []
-  let total = slots.reduce((acc, key) => acc + table[key].length, 0)
+  let total = slots.reduce((acc, key) => acc + (table[key] || []).length, 0)
   while (total) {
     slots.forEach((slot) =>
       table[slot].length &&
