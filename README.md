@@ -105,6 +105,7 @@ require('timetabling-solver').minCollisions(data, config, callback, partialCallb
       generation,       //Number of generation of elapsed
       stats,            //Stats as per genetic-js
       pop,              //Current population
+      popTables,        //Same as pop, but each entity is converted into proper timetable - useful for debugging.
       collisions        //Collisions in the fittest timetable
     }
 ```
