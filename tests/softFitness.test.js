@@ -31,12 +31,12 @@ tape('softFitness influences results', (assert) => {
   const constraints = [
     ['Tennis', 'Climbing'],
   ]
-  const softFitness = (timetable) => timetable['8:00'] == 'Tennis' ? 0 : 10;
+  const softFitness = (timetable) => timetable['8:00'] == 'Tennis' ? 1 : 10;
   solve({ slots, bookables, constraints, softFitness }, {
     iterations: 10,
     size: 3
   }, (table, fitness) => {
     assert.deepEqual(table, { '8:00': ['Tennis'], '10:00': ['Climbing'] })
-    assert.true(fitness.pop.filter((individual) => individual.fitness === 0).length >= 1)
+    assert.true(fitness.pop.filter((individual) => individual.fitness === 1).length >= 1)
   })
 })
