@@ -24,7 +24,7 @@ exports.minCollisions = (data, config = {}, callback, partialCallback) => {
     const constraints = this.userData.constraints
     const collisions = constraints.reduce((acc, constraint) =>
       acc.concat(findCollisions(timetable, constraint)), [])
-    const popTables = pop.map(p => ({ fitness: p.fitness, entity: table(...p.entity) }));
+    const popTables = config.debug && pop.map(p => ({ fitness: p.fitness, entity: table(...p.entity) })) || null;
     const meta = { fitness, generation, stats, pop, popTables, collisions }
     if (isFinished && callback) return callback(timetable, meta)
     if (partialCallback) return partialCallback(timetable, meta)
