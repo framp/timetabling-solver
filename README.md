@@ -94,7 +94,8 @@ require('timetabling-solver').minCollisions(data, config, callback, partialCallb
     size: 250,          // Size of the population
     crossover: 0.3,     // Probability of crossover happening
     mutation: 0.8,      // Probability of a mutation happening
-    skip: 20            // Numnber of generations to skip before calling partialCallback
+    skip: 20,           // Numnber of generations to skip before calling partialCallback
+    debug?: false,      // provide additional data to callbacks, for easier debugging
     ...more: check out genetic-js documentation
   }
   callback = (timetable, meta) //Function called at the end of the computation
@@ -105,6 +106,7 @@ require('timetabling-solver').minCollisions(data, config, callback, partialCallb
       generation,       //Number of generation of elapsed
       stats,            //Stats as per genetic-js
       pop,              //Current population
+      popTables,        //Same as pop, but each entity is converted into proper timetable. Available ONLY if config.debug is set
       collisions        //Collisions in the fittest timetable
     }
 ```
