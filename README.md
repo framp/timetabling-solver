@@ -121,9 +121,9 @@ Whether you want to solve another entire timetabling problem or whether you foun
 Unfortunately I benefited from this code a long time ago - aka I'm not using it actively and don't have too much time to work on it.
 
 ## Contributors
- - [@framp](http://framp.me)
  - [@sithmel](https://github.com/sithmel)
  - [@lud77](https://github.com/lud77)
+ - [@alenl](https://github.com/alenl)
 
 ## Credits
 
