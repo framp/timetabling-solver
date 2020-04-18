@@ -34,7 +34,7 @@ Following this approaches increased performances greatly and reduced the number 
 
 ## Basic Example
 
-```
+```js
 const solve = require('timetabling-solver').minCollisions
 
 const slots = ['8:00', '10:00', '12:00']
@@ -65,7 +65,7 @@ A custom constraint is a function which accept a timetable and returns a list of
  - Returning an empty array means there are no collisions according to your constraint.
  - Returning an array with values from your bookables means they're colliding
 
-```
+```js
 const solve = require('timetabling-solver').minCollisions
 
 const slots = ['8:00', '10:00']
@@ -80,7 +80,7 @@ solve({ slots, bookables, constraints }, {}, (table, fitness) => console.log(tab
 ```
 
 ## API
-```
+```js
 require('timetabling-solver').minCollisions(data, config, callback, partialCallback)
   data = {              // Object which represents the specification of the problem
     slots               // List of time slots 
