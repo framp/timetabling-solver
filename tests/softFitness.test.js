@@ -36,6 +36,7 @@ tape('softFitness influences results', (assert) => {
     iterations: 10,
     size: 3
   }, (table, fitness) => {
+    // according to softFitness set above, it will prefer that Tennis be at 8:00
     assert.deepEqual(table, { '8:00': ['Tennis'], '10:00': ['Climbing'] })
     assert.true(fitness.pop.filter((individual) => individual.fitness === 1).length >= 1)
   })
