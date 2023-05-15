@@ -88,6 +88,7 @@ require('timetabling-solver').minCollisions(data, config, callback, partialCallb
     constraints: [      // List of constraints
       constraint        // List of bookables which shouldn't overlap
     ]  
+    softFitness? = (timetable) // Optional, prioritizes between two equally fit solutions (smaller number -> more preferred)
   }
   config = {            // Object which contains extra configuration    
     iterations: 1000,   // Maximum number of generations before stopping the algorithm
