@@ -16,13 +16,13 @@ const randomSet = (length, bookables) => {
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 const slots = days.reduce((acc, day) => acc.concat(multiple(4, day)), [])
 const bookables = [].concat(multiple(10, 'Math'))
-                    .concat(multiple(8, 'Physics'))
-                    .concat(multiple(8, 'Chemistry'))
-                    .concat(multiple(10, 'English'))
-                    .concat(multiple(5, 'History'))
-                    .concat(multiple(5, 'Geography'))
-                    .concat(multiple(7, 'Italian'))
-                    .concat(multiple(5, 'Philosophy'))
+  .concat(multiple(8, 'Physics'))
+  .concat(multiple(8, 'Chemistry'))
+  .concat(multiple(10, 'English'))
+  .concat(multiple(5, 'History'))
+  .concat(multiple(5, 'Geography'))
+  .concat(multiple(7, 'Italian'))
+  .concat(multiple(5, 'Philosophy'))
 const constraints = [
   randomSet(20, bookables),
   randomSet(20, bookables),

@@ -47,9 +47,9 @@ const findCollisions = (timetable, constraint) => {
   const slotLists = constraint.map((bookable) => [bookable, slots.filter(inSlot(bookable))])
   const collisions = slotLists.reduce((acc, [bookable, slotList], i, slotLists) =>
     acc.concat(slotLists.slice(i + 1).reduce((acc, [bookableTarget, slotListTarget]) =>
-    acc.concat(slotList.length && slotListTarget.length && !hasDifference(slotList, slotListTarget)
-      ? [bookable, bookableTarget].join()
-      : []), [])), [])
+      acc.concat(slotList.length && slotListTarget.length && !hasDifference(slotList, slotListTarget)
+        ? [bookable, bookableTarget].join()
+        : []), [])), [])
   return collisions
 }
 

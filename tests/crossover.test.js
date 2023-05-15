@@ -19,7 +19,7 @@ tape('crossover works', (assert) => {
     ['abcdef'.split(''), '213986754'.split('')],
     ['abcdef'.split(''), '128456739'.split('')]
   ]
-  const [ son, daughter ] = crossover.apply(context, data)
+  const [son, daughter] = crossover.apply(context, data)
   assert.deepEqual(son[0], 'abcdef'.split(''))
   assert.deepEqual(daughter[0], 'abcdef'.split(''))
   assert.deepEqual(new Set(son[1]), new Set('123456789'.split('')))

@@ -16,8 +16,8 @@ const swapBookable = (bookable, slot, table) => {
 
 module.exports = function (mother, father) {
   const bookables = shuffle(this.userData.bookables)
-  const tables = [ table(...mother), table(...father) ]
-  const slots = [ father[0], mother[0] ]
+  const tables = [table(...mother), table(...father)]
+  const slots = [father[0], mother[0]]
   const [a, b] = [
     Math.floor(Math.random() * bookables.length),
     Math.floor(Math.random() * bookables.length)

@@ -29,9 +29,9 @@ tape('softFitness influences results', (assert) => {
   const slots = ['8:00', '10:00']
   const bookables = ['Climbing', 'Tennis']
   const constraints = [
-    ['Tennis', 'Climbing'],
+    ['Tennis', 'Climbing']
   ]
-  const softFitness = (timetable) => timetable['8:00'] == 'Tennis' ? 1 : 10;
+  const softFitness = (timetable) => timetable['8:00'][0] === 'Tennis' ? 1 : 10
   solve({ slots, bookables, constraints, softFitness }, {
     iterations: 10,
     size: 3

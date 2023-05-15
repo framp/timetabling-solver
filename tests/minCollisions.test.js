@@ -35,7 +35,7 @@ tape('minCollisions, custom constraint', (assert) => {
     iterations: 10,
     size: 3
   }, (table, fitness) => {
-    assert.deepEqual(table, { '8:00': [ 'Tennis' ], '10:00': [ 'Climbing' ] })
+    assert.deepEqual(table, { '8:00': ['Tennis'], '10:00': ['Climbing'] })
     assert.true(fitness.pop.filter((individual) => individual.fitness === 0).length >= 1)
   })
 })
@@ -54,8 +54,7 @@ tape('minCollisions, custom constraint composition', (assert) => {
     iterations: 10,
     size: 3
   }, (table, fitness) => {
-    const res = JSON.stringify(table)
-    assert.deepEqual(table, { '8:00': [ 'Tennis' ], '10:00': [ 'Climbing' ] })
+    assert.deepEqual(table, { '8:00': ['Tennis'], '10:00': ['Climbing'] })
     assert.true(fitness.pop.filter((individual) => individual.fitness === 0).length >= 1)
   })
 })
