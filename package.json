@@ -12,8 +12,8 @@
     "genetic-js-no-ww": "^0.2.1"
   },
   "devDependencies": {
-    "faucet": "0.0.1",
-    "standard": "^14.3.1",
-    "tape": "^4.11.0"
+    "faucet": "^0.0.4",
+    "standard": "^17.0.0",
+    "tape": "^5.6.3"
   }
 }
