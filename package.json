@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": "https://github.com/framp/timetabling-solver",
   "scripts": {
-    "test": "node node_modules/tape/bin/tape tests/* | node node_modules/faucet/bin/cmd",
+    "test": "tape tests/* | faucet",
     "lint": "standard"
   },
   "dependencies": {
